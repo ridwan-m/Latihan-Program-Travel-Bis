@@ -52,6 +52,6 @@ public class Latihan {
             System.out.println("Biaya Parkir: "+total);
         }
         System.out.println("Semoga Pelayanan Kami Memuaskan");
-
+        
     }
 }
