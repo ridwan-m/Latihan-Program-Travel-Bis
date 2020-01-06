@@ -15,28 +15,30 @@ public class Latihan {
         System.out.print("Jenis       : ");
         int jenis = Obj.nextInt();
         System.out.print("Jam Masuk   : ");
-        int jmasuk = Obj.nextInt();
+        int jammasuk = Obj.nextInt();
         System.out.print("Jam Keluar  : ");
-        int jkeluar = Obj.nextInt();
+        int jamkeluar = Obj.nextInt();
+        
 
-        if(jmasuk>jkeluar){
-            jkeluar=jkeluar+24;
+        if(jammasuk>jamkeluar){
+            jamkeluar=jamkeluar+24;
         }
     
         System.out.println();
+        System.out.println("Terimakasih Telah Melakukan Transaksi Dengan Rincian Sebagai Berikut ");
         System.out.println("Plat: " +plat);
         
         if(jenis==1){
             System.out.println("Kendaraan: Mobil");
             biayaparkir = 5000;
             biayaparkirnext = 3000;
-        }else if(jenis==2){
+        }else{
             System.out.println("Kendaraan: Motor");
             biayaparkir = 3000;
             biayaparkirnext = 1500;
         }
 
-        lamaparkir=jkeluar-jmasuk;
+        lamaparkir=jamkeluar-jammasuk;
         System.out.println("Lama Parkir: "+lamaparkir+" Jam");
         if(lamaparkir==1){
             total = biayaparkir;
@@ -45,6 +47,11 @@ public class Latihan {
         else if(lamaparkir>1){
             total = biayaparkir+((lamaparkir-1)*biayaparkirnext);
             System.out.println("Biaya Parkir: "+total);
+        }else if(lamaparkir<1){
+            total = biayaparkir+((lamaparkir=1)*biayaparkirnext);
+            System.out.println("Biaya Parkir: "+total);
         }
+        System.out.println("Semoga Pelayanan Kami Memuaskan");
+
     }
 }
